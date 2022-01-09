@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Student Registration Form</title>
+    <style>
+      h3 {
+        font-family: Calibri;
+        font-size: 25pt;
+        font-style: normal;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      table {
+        font-family: Calibri;
+        color: white;
+        font-size: 15pt;
+        font-style: normal;
+        font-weight: bold;
+        background-color: rgba(4, 87, 62, 0.863);
+        border-collapse: collapse;
+        border-radius: 5px;
+      }
+      table.inner {
+        border: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="registration" method="post">
+        <h3>STUDENT REGISTRATION FORM</h3>
+
+        <table align="center" cellpadding="10">
+          <tr>
+            <td>Student_id</td>
+            <td><input type="number" name="stud_id" maxlength="30" /></td>
+          </tr>
+
+          <tr>
+            <td>FULL NAME</td>
+            <td>
+              <input type="text" name="fullname" maxlength="30" />
+              (max 30 characters a-z and A-Z)
+            </td>
+          </tr>
+
+          <tr>
+            <td>EMAIL ID</td>
+            <td><input type="text" name="email" maxlength="100" /></td>
+          </tr>
+
+          <tr>
+            <td>Age</td>
+            <td>
+              <input type="number" name="Age" maxlength="2" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>CITY</td>
+            <td>
+              <input type="text" name="city" maxlength="30" />
+              (max 30 characters a-z and A-Z)
+            </td>
+          </tr>
+
+          <!----- State ------------->
+          <tr>
+            <td>STATE</td>
+            <td>
+              <input type="text" name="state" maxlength="30" />
+              (max 30 characters a-z and A-Z)
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" align="center">
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

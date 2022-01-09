@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "poppins", sans-serif;
+      }
+
+      .sidebar {
+        width: 100px;
+        height: 100%;
+        background: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+      .sidebar .text {
+        text-align: center;
+        font-size: 25px;
+        line-height: 65px;
+        letter-spacing: 0.5px;
+        color: rgba(4, 87, 62, 0.863);
+      }
+      nav ul {
+        background: white;
+        height: 100%;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+      }
+      nav ul li {
+        line-height: 70px;
+
+      }
+      nav ul li span{
+        padding:5px;
+        
+      }
+      nav ul li.active a {
+        color: rgb(48, 192, 103);
+        background: white;
+        border-left-color: rgb(48, 192, 103);
+      }
+      nav ul li a {
+        color: grey;
+        display: block;
+        border-left: 6px solid transparent;
+        font-size: 28px;
+        width: 100%;
+        padding-right: 10px;
+        text-align: center;
+      }
+      nav ul li a .material-icons {
+        font-size: 36px;
+      }
+      nav ul li a:hover {
+        color: rgba(4, 87, 62, 0.863);
+        background: white;
+        border-left-color: rgba(4, 87, 62, 0.863);
+      }
+      .container-fluid {
+        background-color: rgba(4, 87, 62, 0.863);
+        padding: 30px;
+      }
+      .text h6,h3{
+      position: relative;
+      margin:0px 100px ;
+      }
+      form{
+        padding: 10px 0px;
+      }
+      .form{
+        position:absolute;
+        left:340%;
+        height:40px ;
+        border-radius:0.2rem;
+        padding:5px;
+      }
+      .list{
+        justify-content:center;
+        background-color: rgba(4, 87, 62, 0.863);
+      }
+      .list-group{
+        font-size:14px;
+        position:relative;
+        left:8%;
+      }
+      .list ul li{
+        background-color: transparent;
+        color: white;
+        border: none;
+      }
+      .list ul li:hover{
+        background-color:rgba(32, 212, 62, 0.863);
+        color: white;
+        border-top-left-radius:5px ;
+        border-top-right-radius:5px ;
+      }
+      .list ul li span{
+        color:rgb(252, 230, 38);
+        background-color:rgba(4, 87, 62, 0.863);
+        border-radius: 5px;
+        font-size:15px;
+      }
+      .list ul li span:hover{
+        color:rgb(252, 230, 38);
+      }
+      .details{
+        background-color:rgba(32, 212, 62, 0.863);
+        width:95%;
+        position:fixed;
+        height:10%;
+        left:100px;
+      }
+      .details section{
+        padding: 12.5px 8px;
+        margin:15px 15px;
+        width:100%;
+      }
+      .details .container thead{
+        background-color:greenyellow;
+        color:white;
+        font-size:12px;
+      }
+      .details .container .table{
+        width:120%;
+      }
+      .table th,td{
+        text-align:left;
+        border:0.5px solid rgb(185, 185, 185);
+        border-collapse: collapse;
+      }
+      .table tr:nth-child(even){
+      background-color:rgb(252, 250, 250);
+      }
+      tr:nth-child(even):hover{
+       background-color:rgb(150, 199, 150);
+      }
+      
+       .table .text-input{
+         width:60px;
+       }
+       
+    </style>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid text-white text-justify">
+      <div class="text">
+        <h6>home > Appeals</h6>
+        <h3>Appeals</h3>
+      </div>
+      <form>
+        <div class="row">
+          <div class="col-3">
+           <input type="text" class="form" id="search" placeholder="Search Appeals" name="Search">
+          </div>
+        </div>
+      </form>
+      <nav class="sidebar">
+        <div class="text fw-bold"><span>CBRE</span>
+        <ul>
+          <li>
+            <a href="registration_form.html">
+              <span class="material-icons"> assignment </span>
+            </a>
+          </li>
+          <li>
+            <a href="upd.html">
+              <span class="material-icons"> gavel </span>
+            </a>
+          </li>
+          <li>
+            <a href="delete.html">
+              <span class="material-icons"> request_page </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="material-icons"> person_search </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section  class="list ">
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-pill">22</span>
+          ALL APPEALS
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-pill">22</span>
+          AWAITING INFORMATION
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-pill">22</span> 
+          INFORMATION RECIEVED
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-pill">22</span>
+          ANALYSIS COMPLETE
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-pill">22</span>
+          HEARING COMPLETE
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-pill">22</span>
+          APPEAL FINALIZED
+        </li>
+      </ul>
+    </section>
+      <div class="details">
+        <section class="container">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th><input type="checkbox" class="check-input" value=""></th>
+                <th>TAX YEAR</th>
+                <th>HEARING DATE</th>
+                <th>JURISICTION</th>
+                <th>CLIENT NAME</th>
+                <th>PARCEL ID</th>
+                <th>APPEAL STATUS</th>
+                <th>APPEAL LETTER</th>
+                <th>TARGET VALUE</th>
+                <th>HEARING VALUE</th>
+                <th>FINALIZED VALUE</th>
+              </tr>
+            </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="check-input" value=""></td>
+                  <td>2020</td>
+                  <td>3/12/2020</td>
+                  <td>Harris county</td>
+                  <td>Datagain inc.</td>
+                  <td>23-151</td>
+                  <td>Awaiting information Dan Brown</td>
+                  <td>Sent</td>
+                  <td>$1,000,000</td>
+                  <td>$1,000,000</td>
+                  <td><input type="text" class="text-input" value=""></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="check-input" value=""></td>
+                  <td>2020</td>
+                  <td>3/12/2020</td>
+                  <td>Harris county</td>
+                  <td>Datagain inc.</td>
+                  <td>23-151</td>
+                  <td>Awaiting information Dan Brown</td>
+                  <td>Not Sent</td>
+                  <td>$1,000,000</td>
+                  <td>$1,000,000</td>
+                  <td><input type="text" class="text-input" value=""></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="check-input" value=""></td>
+                  <td>2020</td>
+                  <td>3/12/2020</td>
+                  <td>Harris county</td>
+                  <td>Datagain inc.</td>
+                  <td>23-151</td>
+                  <td>Awaiting information Dan Brown</td>
+                  <td>Not Sent</td>
+                  <td>$1,000,000</td>
+                  <td>$1,000,000</td>
+                  <td><input type="text" class="text-input" value=""></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="check-input" value=""></td>
+                  <td>2020</td>
+                  <td>3/12/2020</td>
+                  <td>Harris county</td>
+                  <td>Datagain inc.</td>
+                  <td>23-151</td>
+                  <td>Awaiting information Dan Brown</td>
+                  <td>Sent</td>
+                  <td>$1,000,000</td>
+                  <td>$1,000,000</td>
+                  <td><input type="text" class="text-input" value=""></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="check-input" value=""></td>
+                  <td>2020</td>
+                  <td>3/12/2020</td>
+                  <td>Harris county</td>
+                  <td>Datagain inc.</td>
+                  <td>23-151</td>
+                  <td>Awaiting information Dan Brown</td>
+                  <td>Sent</td>
+                  <td>$1,000,000</td>
+                  <td>$1,000,000</td>
+                  <td><input type="text" class="text-input" value=""></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="check-input" value=""></td>
+                  <td>2020</td>
+                  <td>3/12/2020</td>
+                  <td>Harris county</td>
+                  <td>Datagain inc.</td>
+                  <td>23-151</td>
+                  <td>Awaiting information Dan Brown</td>
+                  <td>Sent</td>
+                  <td>$1,000,000</td>
+                  <td>$1,000,000</td>
+                  <td><input type="text" class="text-input" value=""></td>
+                </tr>
+            </tbody>
+          </table>
+      </section>
+    </div>
+</div>
+<script>
+    $('nav ul li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+</script>
+  </body>
+</html>
